@@ -4,12 +4,12 @@ region = "us-east-2"
 resource "aws_instance" "myawsserver" {
   ami = "ami-077e31c4939f6a2f3"
   instance_type = "t2.micro"
-  key_name = "zensar1"
+  key_name = "Swapnil-k8s-key"
 
   tags = {
-    Name = "Gagan-devops-server-v2"
+    Name = "Swapnil-devops-server-v2"
     env = "production"
-    owner = "Gagandeep"
+    owner = "Swapnil"
   }
   provisioner "local-exec" {
     command = "echo The servers IP address is ${self.public_ip} && echo ${self.public_ip} > /tmp/inv"
